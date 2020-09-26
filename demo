@@ -14,7 +14,7 @@ IAM Role – Roles->Create Role->Ec2->Permissions->AmazonEKSWorkerNodePolicy, Am
 Compute->Add Node Group->Name->Role->Subnets->Allow remote SSH->KeyPairs->Allow Remote Access From->Compute->InstanceType->AS->Min, Max, Desired->create->Kubectl get node –watch ->
 
 Part3:
-Deploy Sample->kubectl create namespace my-namespace->kubectl apply -f https://github.com/mebuzz/K8s/blob/master/sample-app
+Deploy Sample->kubectl create namespace my-namespace->kubectl apply -f https://raw.githubusercontent.com/mebuzz/K8s/master/sample-app
 
 Check Deployed Service -- kubectl -n my-namespace describe service my-service->kubectl get po -n my-namespace->kubectl -n my-namespace describe pod <podID>->kubectl exec -it <my-deployment> -n my-namespace -- /bin/bash ->cat /etc/resolv.conf
 
