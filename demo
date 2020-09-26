@@ -16,7 +16,7 @@ Compute->Add Node Group->Name->Role->Subnets->Allow remote SSH->KeyPairs->Allow 
 Part3:
 Deploy Sample->kubectl create namespace my-namespace->kubectl apply -f https://raw.githubusercontent.com/mebuzz/K8s/master/sample-app
 
-Check Deployed Service -- kubectl -n my-namespace describe service my-service->kubectl get po -n my-namespace->kubectl -n my-namespace describe pod <podID>->kubectl exec -it <my-deployment> -n my-namespace -- /bin/bash ->cat /etc/resolv.conf
+Check Deployed Service -- kubectl -n my-namespace describe service my-service->kubectl get po -n my-namespace->kubectl -n my-namespace describe pod <podID>->kubectl exec -it <my-deployment> -n my-namespace -- sh ->cat /etc/resolv.conf
 
 Clean up resources – kubectl delete namespace my-namespace->Delete NodeGroup -> Delete Cluster -> Delete VPC, Subnets, SGs -> Delete Service Roles
 
